@@ -2,11 +2,6 @@ pipeline {
   agent any
   
   stages {
-    stage('Checkout\n from CMS') {
-      steps {
-        echo 'Checkout from scm'
-      }
-    }
     stage('unit tests') {
       steps {
         echo 'unit tests'
