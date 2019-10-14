@@ -12,11 +12,6 @@ pipeline {
         echo 'unit tests'
       }
     }
-    stage('static code analysis') {
-      steps {
-        echo 'static code analysis'
-      }
-    }
     stage('publiching artifacts') {
       steps {
         echo 'publiching artifacts'
@@ -42,14 +37,14 @@ pipeline {
         echo 'acceptance tests (optional)'
       }
     }
-    stage('jira ticket creation') {
+    stage('load and stress tests (optional)') {
+      steps {
+        echo 'load and stress tests (optional)'
+      }
+    }    
+    stage('jira ticket status modification') {
       steps {
         echo 'jira ticket creation'
-      }
-    }
-    stage('merge on testing') {
-      steps {
-        echo 'merge on testing'
       }
     }
   }
