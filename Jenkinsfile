@@ -7,7 +7,34 @@ pipeline {
     
   }
   stages {
-    stage('Build') {
+    stage('Checkout from CMS') {
+    
+    }
+    stage('unit tests') {
+    
+    }
+    stage('static code analysis') {
+    
+    }
+    stage('publiching artifacts') {
+    
+    }
+    stage('deploy') {
+    
+    }
+    stage('regression tests (optional)') {
+    
+    }
+    stage('integration tests (optional)') {
+    
+    }
+    stage('acceptance tests (optional)') {
+    
+    }
+    stage('jira ticket creation') {
+    
+    }    
+    stage('merge on testing') {
       steps {
         sh 'npm install'
       }
@@ -15,13 +42,6 @@ pipeline {
     stage('Test') {
       steps {
         sh './jenkins/scripts/test.sh'
-      }
-    }
-    stage('Deliver') {
-      steps {
-        sh './jenkins/scripts/deliver.sh'
-        input 'Finished using the web site? (Click "Proceed" to continue)'
-        sh './jenkins/scripts/kill.sh'
       }
     }
   }
